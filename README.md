@@ -1,6 +1,10 @@
 # YAMMS - Yet Another Mark Management System
 
-Ein lokales, DSGVO-freundliches Notenverwaltungstool für Lehrkräfte.
+> **⚠️ TRAININGSPROJEKT ⚠️**
+> Dies ist ein Lernprojekt zur Demonstration moderner Python-Entwicklungspraktiken.
+> **Noch keine Funktionen implementiert** - aktuell nur Projekt-Setup und Entwicklungsumgebung.
+
+Ein lokales, DSGVO-freundliches Notenverwaltungstool für Lehrkräfte *(geplant)*.
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,7 +12,7 @@ Ein lokales, DSGVO-freundliches Notenverwaltungstool für Lehrkräfte.
 
 ## Überblick
 
-YAMMS ist ein Desktop-Tool zur schnellen und transparenten Notenverwaltung, das speziell für einzelne Lehrkräfte entwickelt wurde. Es läuft vollständig offline und bietet:
+YAMMS soll ein Desktop-Tool zur schnellen und transparenten Notenverwaltung werden, das speziell für einzelne Lehrkräfte entwickelt wird. Es soll vollständig offline laufen und bieten *(geplante Features)*:
 
 - 📚 **Klassen- und Schülerverwaltung** mit flexibler Organisation
 - 📝 **Aufgabenverwaltung** mit konfigurierbaren Gewichtungen
@@ -17,6 +21,8 @@ YAMMS ist ein Desktop-Tool zur schnellen und transparenten Notenverwaltung, das 
 - 📄 **PDF-Reports** für Übersichten und Einzelberichte
 - 🔒 **Sichere lokale Datenhaltung** mit optionaler Verschlüsselung
 - 💾 **Automatische Backups** mit Rotation
+
+> **Aktueller Stand:** Nur Entwicklungsumgebung und Projekt-Setup implementiert.
 
 ## Schnellstart
 
@@ -37,47 +43,51 @@ python3 -m venv venv
 source venv/bin/activate  # Linux/macOS
 # oder: venv\Scripts\activate  # Windows
 
-# Abhängigkeiten installieren
-pip install -e ".[dev]"
+# Entwicklungsumgebung einrichten (Dependencies + Pre-commit hooks)
+nox -s dev_install
 
-# Tests ausführen
-make test
-# oder: nox -s tests
-
-# Dokumentation bauen
-make docs
-# oder: nox -s docs
+# Funktionalität testen
+nox -s tests           # Tests ausführen
+nox -s docs           # Dokumentation bauen
+nox -s lint           # Code-Qualität prüfen
 ```
 
-### Dokumentation bauen
-
-Die vollständige Dokumentation wird mit Sphinx generiert:
+### Schnelle Entwicklung
 
 ```bash
 # Entwicklungsumgebung aktivieren
 source venv/bin/activate
 
-# Dokumentation bauen
-cd docs
-sphinx-build -b html source build/html
-
-# Oder mit Make/nox
-make docs
-nox -s docs
-
-# Lokalen Server starten
-make docs-serve
+# Dokumentation mit Live-Server
+nox -s docs_serve
 # dann http://localhost:8000 öffnen
+
+# Alle verfügbaren Tasks anzeigen
+nox -l
 ```
 
 ## Architektur
 
-YAMMS folgt den Prinzipien der Hexagonal Architecture:
+YAMMS nutzt eine **feature-orientierte Architektur** nach modernen Prinzipien (2025):
 
-- **Domain:** Kerngeschäftslogik ohne externe Abhängigkeiten
-- **Application:** Use-Cases und Orchestrierung
-- **Infrastructure:** Adapter für Datenbank, Dateien, etc.
-- **UI:** PySide6-basierte Desktop-Oberfläche
+### 🎯 Feature-Module
+- **Students:** Schülerverwaltung (UI + Logik + Tests)
+- **Grades:** Noteneingabe und -berechnung
+- **Classes:** Klassenverwaltung und -organisation
+- **Reports:** PDF-Export und Berichte
+- **Import/Export:** Datenimport aus Excel/CSV
+
+### 🏗️ Shared Components
+- **Models:** SQLModel-basierte Datenmodelle
+- **Database:** SQLite mit typsicheren Queries
+- **UI Framework:** PySide6 mit reaktiven Components
+- **Utils:** Gemeinsame Hilfsfunktionen
+
+### 💡 Design-Prinzipien
+- **Colocation:** UI und Logik pro Feature zusammen
+- **Reactive:** Datenänderungen propagieren automatisch zur UI
+- **Type Safety:** Vollständige Typisierung mit MyPy
+- **Testability:** Jedes Feature hat eigene Tests
 
 ## Entwicklung
 
@@ -85,71 +95,92 @@ YAMMS folgt den Prinzipien der Hexagonal Architecture:
 
 ```bash
 # Entwicklungsumgebung einrichten
-make install
+nox -s dev_install
 
 # Code formatieren
-make format
+nox -s format
 
 # Linting
-make lint
+nox -s lint
 
 # Alle Tests
-make test
+nox -s tests
 
 # Alle CI-Checks
-make ci
+nox -s tests lint security docs
 ```
 
-### Verfügbare Tasks
 
+
+### Verfügbare nox-Sessions
+
+#### 🧪 Testing & Quality
 ```bash
-# Alle verfügbaren Make-Targets anzeigen
-make help
-
-# Oder nox-Sessions anzeigen
-nox -l
+nox -s tests            # Vollständige Test-Suite mit pytest
+nox -s tests_quick      # Schnelle Tests ohne Coverage
+nox -s coverage         # Coverage-Report (HTML + Terminal)
+nox -s tests_ui         # UI-Tests mit pytest-qt
 ```
 
-## Technologie-Stack
+#### 🔍 Code-Qualität
+```bash
+nox -s lint             # Linting mit Ruff (Fehler finden)
+nox -s format           # Code formatieren mit Black + Ruff
+nox -s typecheck        # Typen prüfen mit MyPy
+nox -s security         # Sicherheitschecks (Bandit + Safety)
+```
 
-- **Python 3.12** - Moderne Python-Features
-- **PySide6 (Qt)** - Native Desktop-UI
-- **SQLModel** - Typsichere ORM mit SQLAlchemy
-- **SQLite** - Lokale Datenbank
-- **Pandas** - Datenverarbeitung
-- **Sphinx** - Dokumentation
-- **pytest** - Testing
-- **nox** - Task-Orchestrierung
+#### 📚 Dokumentation
+```bash
+nox -s docs             # Sphinx-Dokumentation bauen
+nox -s docs_serve       # Live-Server für Docs (http://localhost:8000)
+```
+
+#### 🏗️ Build & Deployment
+```bash
+nox -s build            # Python-Packages erstellen
+nox -s build_windows    # Windows-Executable mit PyInstaller
+nox -s build_linux      # Linux-Binary erstellen
+```
+
+#### ⚙️ Entwicklung
+```bash
+nox -s dev_install      # Entwicklungsumgebung einrichten
+nox -s pre_commit       # Pre-commit hooks installieren
+nox -s pre_commit_all   # Pre-commit auf alle Dateien anwenden
+nox -s clean            # Build-Artefakte aufräumen
+nox -s ci               # Alle CI-Checks (für Continuous Integration)
+```
+
+#### 📋 Übersicht
+```bash
+nox -l                  # Alle verfügbaren Sessions anzeigen
+```
 
 ## Projektstruktur
 
 ```
 yamms/
-├── yamms/                  # Hauptpaket
-│   ├── domain/            # Domain-Logik
-│   ├── application/       # Use-Cases
-│   ├── infrastructure/    # Externe Adapter
-│   └── ui_pyside/        # PySide6 UI
-├── tests/                 # Test-Suite
-├── docs/                  # Sphinx-Dokumentation
-├── noxfile.py            # nox-Konfiguration
-├── pyproject.toml        # Projekt-Konfiguration
-└── Makefile              # Entwicklungs-Shortcuts
+├── yamms/                    # Hauptpaket
+│   ├── features/            # Feature-Module
+│   │   ├── students/        # Schülerverwaltung
+│   │   ├── grades/          # Notenverwaltung
+│   │   ├── classes/         # Klassenverwaltung
+│   │   └── reports/         # Berichte & Export
+│   ├── shared/              # Geteilte Komponenten
+│   │   ├── models/          # SQLModel Datenmodelle
+│   │   ├── database/        # DB-Abstraktionen
+│   │   ├── ui/              # Wiederverwendbare UI-Komponenten
+│   │   └── utils/           # Hilfsfunktionen
+│   └── main.py              # Anwendungseinstieg
+├── tests/                   # Test-Suite (spiegelt yamms/ Struktur)
+├── docs/                    # Sphinx-Dokumentation
+├── noxfile.py              # nox-Konfiguration
+├── pyproject.toml          # Projekt-Konfiguration
+└── README.md               # Diese Datei
 ```
 
-## Beitragen
 
-Beiträge sind willkommen! Siehe [CONTRIBUTING.md](CONTRIBUTING.md) für Details.
-
-1. Fork des Repositories
-2. Feature-Branch erstellen (`git checkout -b feature/amazing-feature`)
-3. Commits mit aussagekräftigen Nachrichten
-4. Tests hinzufügen/aktualisieren
-5. Pull Request erstellen
-
-## Lizenz
-
-Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details.
 
 ## Status
 
@@ -162,10 +193,3 @@ Dieses Projekt steht unter der MIT-Lizenz. Siehe [LICENSE](LICENSE) für Details
 - [ ] UI-Implementierung
 - [ ] Import/Export-Funktionen
 - [ ] PDF-Reports
-
-## Support
-
-- 📖 [Dokumentation](https://yamms.readthedocs.io)
-- 🐛 [Bug Reports](https://github.com/MisfitFred/yamms/issues)
-- 💬 [Diskussionen](https://github.com/MisfitFred/yamms/discussions)
-- 📧 [E-Mail Support](mailto:support@yamms.de)
