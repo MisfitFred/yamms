@@ -1,0 +1,152 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "YAMMS: Format Code",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s format",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Run Tests",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s tests",
+            "group": "test",
+            "dependsOn": [
+                "YAMMS: Format Code"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Quick Tests",
+            "type": "shell",
+            "command": "source venv/bin/activate && pytest tests/ -v",
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Lint Check",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s lint",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Build Documentation",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s docs",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Serve Documentation",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s docs_serve",
+            "group": "build",
+            "isBackground": true,
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Run Application",
+            "type": "shell",
+            "command": "source venv/bin/activate && python -m yamms",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Security Check",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s security",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Clean Build Artifacts",
+            "type": "shell",
+            "command": "source venv/bin/activate && nox -s clean",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "YAMMS: Watch and Test",
+            "type": "shell",
+            "command": "source venv/bin/activate && pytest tests/ -v --tb=short",
+            "group": "test",
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "dedicated"
+            },
+            "problemMatcher": {
+                "owner": "python",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):\\s+(.*)",
+                    "file": 1,
+                    "line": 2,
+                    "message": 3
+                }
+            }
+        }
+    ]
+}

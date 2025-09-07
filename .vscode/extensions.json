@@ -1,0 +1,17 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "charliermarsh.ruff",
+        "ms-python.mypy-type-checker",
+        "ms-python.debugpy",
+        "lextudio.restructuredtext",
+        "trond-snekvik.simple-rst",
+        "ms-vscode.vscode-json",
+        "ms-python.pylint",
+        "ms-toolsai.jupyter",
+        "donjayamanne.python-environment-manager",
+        "kevinrose.vsc-python-indent",
+        "njpwerner.autodocstring"
+    ]
+}
