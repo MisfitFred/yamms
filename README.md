@@ -7,7 +7,7 @@
 Ein lokales, DSGVO-freundliches Notenverwaltungstool für Lehrkräfte *(geplant)*.
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Documentation Status](https://readthedocs.org/projects/yamms/badge/?version=latest)](https://yamms.readthedocs.io/en/latest/?badge=latest)
 
 ## Überblick
@@ -193,3 +193,13 @@ yamms/
 - [ ] UI-Implementierung
 - [ ] Import/Export-Funktionen
 - [ ] PDF-Reports
+
+## Lizenz
+
+Dieses Projekt steht unter der Apache License 2.0. Siehe [LICENSE](LICENSE) für Details.
+
+**Warum Apache 2.0?**
+- ✅ Patent-Schutz für Nutzer und Contributors
+- ✅ Schutz vor rechtlichen Problemen bei KI-generiertem Code
+- ✅ Kompatibel mit den meisten anderen Open-Source-Lizenzen
+- ✅ Industriestandard für moderne Open-Source-Projekte

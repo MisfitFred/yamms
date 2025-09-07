@@ -7,6 +7,9 @@ PYTHON_VERSIONS = ["3.12"]
 # Haupt-Python-Version für andere Tasks
 MAIN_PYTHON = "3.12"
 
+# Global: Virtual Environments wiederverwenden für Speed
+nox.options.reuse_existing_virtualenvs = True
+
 
 @nox.session(python=MAIN_PYTHON)
 def format(session):
@@ -48,8 +51,9 @@ def tests_ui(session):
 def coverage(session):
     """Coverage-Report generieren."""
     session.install("-e", ".[test]")
-    session.run("coverage", "run", "-m", "pytest")
-    session.run("coverage", "report")
+    # Coverage sammeln ohne pytest-cov interference
+    session.run("coverage", "run", "-m", "pytest", "--no-cov")
+    session.run("coverage", "report", "--show-missing")
     session.run("coverage", "html")
 
 
