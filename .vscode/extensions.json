@@ -1,17 +1,22 @@
 {
     "recommendations": [
-        "ms-python.python",
-        "ms-python.black-formatter",
-        "charliermarsh.ruff",
-        "ms-python.mypy-type-checker",
-        "ms-python.debugpy",
-        "lextudio.restructuredtext",
-        "trond-snekvik.simple-rst",
-        "ms-vscode.vscode-json",
-        "ms-python.pylint",
-        "ms-toolsai.jupyter",
-        "donjayamanne.python-environment-manager",
-        "kevinrose.vsc-python-indent",
-        "njpwerner.autodocstring"
+        // === CORE PYTHON ===
+        "ms-python.python", // Python Extension
+        "ms-python.debugpy", // Python Debugger
+        // === FORMATIERUNG & LINTING ===
+        "ms-python.black-formatter", // Black Formatter Extension
+        "charliermarsh.ruff", // Ruff Extension (Linting + Import Sort)
+        "ms-python.mypy-type-checker", // MyPy Type Checker
+        // === DOKUMENTATION ===
+        "lextudio.restructuredtext", // RST Support für Sphinx
+        "trond-snekvik.simple-rst", // Erweiterte RST Features
+        // === DEVELOPMENT TOOLS ===
+        "ms-toolsai.jupyter", // Jupyter Notebook Support
+        "donjayamanne.python-environment-manager", // Virtual Environment Manager
+        "kevinrose.vsc-python-indent", // Python Indentation
+        "njpwerner.autodocstring", // Auto-Docstring Generation
+        // === UTILITIES ===
+        "ms-vscode.vscode-json", // JSON Support
+        "ms-vscode.vscode-yaml" // YAML Support
     ]
 }

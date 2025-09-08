@@ -1,57 +1,63 @@
 {
     // Python-Interpreter auf die virtuelle Umgebung setzen
     "python.defaultInterpreterPath": "./venv/bin/python",
-    // Formatierung
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length=88",
-        "--target-version=py312"
-    ],
-    // Automatische Formatierung beim Speichern
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit",
-        "source.fixAll": "explicit"
-    },
-    // Automatische Aktionen beim Speichern für Python-Dateien
+    // === BLACK FORMATTER EXTENSION ===
     "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-            "source.organizeImports": "explicit",
+            "source.organizeImports.ruff": "explicit",
             "source.fixAll.ruff": "explicit"
         }
     },
-    // Linting mit Ruff
-    "python.linting.enabled": true,
-    "python.linting.ruffEnabled": true,
+    // Black Formatter Extension Einstellungen
+    "black-formatter.args": [
+        "--line-length=88",
+        "--target-version=py312"
+    ],
+    // === RUFF EXTENSION ===
+    // Ruff Extension für Linting und Fixing
+    "ruff.enable": true,
+    "ruff.organizeImports": true,
+    "ruff.fixAll": true,
+    "ruff.codeAction.fixViolation": {
+        "enable": true
+    },
+    "ruff.codeAction.disableRuleComment": {
+        "enable": true
+    },
+    // Alte Python Extension Linting deaktivieren (Ruff Extension übernimmt)
+    "python.linting.enabled": false,
+    "python.linting.ruffEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": false,
-    // MyPy für Type-Checking
+    // MyPy für Type-Checking (weiterhin über Python Extension)
     "python.linting.mypyEnabled": true,
     "python.linting.mypyArgs": [
         "--config-file=pyproject.toml"
     ],
-    // Test-Framework
+    // === ALLGEMEINE EDITOR-EINSTELLUNGEN ===
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.rulers": [
+        88
+    ], // Zeigt die 88-Zeichen-Linie (sync mit Black)
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    // === PYTHON ANALYSIS ===
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true,
+    // === TEST-FRAMEWORK ===
     "python.testing.pytestEnabled": true,
     "python.testing.pytestArgs": [
         "tests"
     ],
     "python.testing.unittestEnabled": false,
-    // Weitere Editor-Einstellungen
-    "editor.rulers": [
-        88
-    ], // Zeigt die 88-Zeichen-Linie
-    "editor.tabSize": 4,
-    "editor.insertSpaces": true,
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    // Python-spezifische Einstellungen
-    "python.analysis.typeCheckingMode": "basic",
-    "python.analysis.autoImportCompletions": true,
-    // Sphinx-Dokumentation
+    // === DOKUMENTATION ===
     "restructuredtext.confPath": "./docs/source",
-    // Ausgeschlossene Dateien/Ordner
+    // === AUSGESCHLOSSENE DATEIEN ===
     "files.exclude": {
         "**/__pycache__": true,
         "**/*.pyc": true,
@@ -59,6 +65,8 @@
         ".pytest_cache": true,
         ".mypy_cache": true,
         "htmlcov": true,
-        "*.egg-info": true
+        "*.egg-info": true,
+        "dist": true,
+        "build": true
     }
 }
