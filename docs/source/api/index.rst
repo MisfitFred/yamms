@@ -1,5 +1,5 @@
 API-Referenz
-=============
+============
 
 Diese Seite enthält die automatisch generierte API-Dokumentation für YAMMS.
 
@@ -8,7 +8,7 @@ Diese Seite enthält die automatisch generierte API-Dokumentation für YAMMS.
    Diese Sektion wird erweitert, sobald die ersten Module implementiert sind.
 
 Module-Übersicht
----------------
+----------------
 
 .. toctree::
    :maxdepth: 2
@@ -16,7 +16,7 @@ Module-Übersicht
    modules
 
 Geplante Module
---------------
+---------------
 
 **Domain Layer:**
 

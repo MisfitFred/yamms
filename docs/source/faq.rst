@@ -1,18 +1,18 @@
 Häufig gestellte Fragen (FAQ)
-============================
+=============================
 
 Diese Seite beantwortet die häufigsten Fragen zur Nutzung von YAMMS.
 
 Allgemeine Fragen
-----------------
+-----------------
 
 Was ist YAMMS?
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 YAMMS (Yet Another Mark Management System) ist ein lokales Notenverwaltungstool für Lehrkräfte. Es läuft vollständig offline auf Ihrem Computer und ermöglicht die sichere, DSGVO-konforme Verwaltung von Schülernoten und Bewertungen.
 
 Warum ein weiteres Notenprogramm?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YAMMS wurde entwickelt, weil viele bestehende Lösungen entweder:
 
@@ -24,15 +24,15 @@ YAMMS wurde entwickelt, weil viele bestehende Lösungen entweder:
 YAMMS fokussiert sich auf Einfachheit, Datenschutz und Transparenz.
 
 Ist YAMMS kostenlos?
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 Ja, YAMMS ist Open-Source-Software und komplett kostenlos. Der Quellcode ist auf GitHub verfügbar und kann frei eingesehen und modifiziert werden.
 
 Installation und Setup
----------------------
+----------------------
 
 Welche Systemanforderungen hat YAMMS?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Mindestanforderungen:**
 
@@ -43,7 +43,7 @@ Welche Systemanforderungen hat YAMMS?
 * **Speicherplatz:** 100 MB für Installation + Speicherplatz für Daten
 
 Kann ich YAMMS ohne Installation nutzen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja! YAMMS ist als portable Anwendung verfügbar:
 
@@ -52,21 +52,21 @@ Ja! YAMMS ist als portable Anwendung verfügbar:
 * Alle Daten werden im Benutzerverzeichnis gespeichert
 
 Wo werden meine Daten gespeichert?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Standard-Speicherorte:**
 
-* **Windows:** `C:\Users\[Name]\Dokumente\Noten\`
-* **Linux:** `~/Noten/`
-* **macOS:** `~/Documents/Noten/`
+* **Windows:** ``C:\Users\[Name]\Dokumente\Noten\``
+* **Linux:** ``~/Noten/``
+* **macOS:** ``~/Documents/Noten/``
 
 Sie können den Speicherort beim ersten Start oder später ändern.
 
 Datenschutz und Sicherheit
--------------------------
+--------------------------
 
 Ist YAMMS DSGVO-konform?
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja, YAMMS wurde speziell unter Berücksichtigung der DSGVO entwickelt:
 
@@ -77,7 +77,7 @@ Ja, YAMMS wurde speziell unter Berücksichtigung der DSGVO entwickelt:
 * **Kontrolle:** Vollständige Benutzerkontrolle über Daten
 
 Wie sicher sind meine Daten?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Lokale Speicherung:** Daten verlassen Ihren Computer nicht
 * **Verschlüsselung:** Optional mit SQLCipher (AES-256)
@@ -85,7 +85,7 @@ Wie sicher sind meine Daten?
 * **Zugriffsschutz:** Nur Sie haben Zugriff auf Ihre Daten
 
 Kann ich meine Daten verschlüsseln?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja, YAMMS bietet optionale Verschlüsselung:
 
@@ -98,10 +98,10 @@ Ja, YAMMS bietet optionale Verschlüsselung:
    Bei Verlust des Verschlüsselungs-Passworts sind die Daten unwiderruflich verloren!
 
 Notenverwaltung
---------------
+---------------
 
 Welche Notensysteme werden unterstützt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YAMMS unterstützt verschiedene Bewertungssysteme:
 
@@ -113,7 +113,7 @@ YAMMS unterstützt verschiedene Bewertungssysteme:
 Sie können eigene Notenschlüssel pro Fach definieren.
 
 Wie funktioniert die Gewichtung?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aufgaben können unterschiedlich gewichtet werden:
 
@@ -125,7 +125,7 @@ Aufgaben können unterschiedlich gewichtet werden:
 Die Gesamtnote wird als gewichteter Durchschnitt berechnet.
 
 Kann ich Noten nachträglich ändern?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja, Noten können jederzeit geändert werden:
 
@@ -135,7 +135,7 @@ Ja, Noten können jederzeit geändert werden:
 * Optional: Änderungsprotokoll aktivieren
 
 Wie gehe ich mit fehlenden Schülern um?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YAMMS bietet verschiedene Optionen:
 
@@ -146,10 +146,10 @@ YAMMS bietet verschiedene Optionen:
 Diese Werte fließen nicht in die Notenberechnung ein.
 
 Import und Export
-----------------
+-----------------
 
 Welche Dateiformate werden unterstützt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Import:**
 
@@ -165,7 +165,7 @@ Welche Dateiformate werden unterstützt?
 * HTML (Berichte)
 
 Wie importiere ich Schülerlisten?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **CSV-Format vorbereiten:**
 
@@ -183,7 +183,7 @@ Wie importiere ich Schülerlisten?
    * Import starten
 
 Kann ich Daten aus anderen Programmen übernehmen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Teilweise, je nach Exportmöglichkeiten des anderen Programms:
 
@@ -194,10 +194,10 @@ Teilweise, je nach Exportmöglichkeiten des anderen Programms:
 Bei Problemen können Sie uns eine Beispieldatei zur Verfügung stellen.
 
 Berichte und Ausdruck
---------------------
+---------------------
 
 Welche Berichte kann ich erstellen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Klassenübersicht:** Alle Schüler mit Noten einer Klasse/Fach
 * **Einzelschüler-Zeugnis:** Detaillierte Übersicht für einen Schüler
@@ -206,7 +206,7 @@ Welche Berichte kann ich erstellen?
 * **Anwesenheitslisten:** Leere Listen zum Ausfüllen
 
 Kann ich eigene Report-Vorlagen erstellen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktuell sind die Report-Vorlagen fest vorgegeben. Für v0.3 ist ein Template-System geplant, mit dem Sie eigene Vorlagen erstellen können.
 
@@ -217,7 +217,7 @@ Aktuell sind die Report-Vorlagen fest vorgegeben. Für v0.3 ist ein Template-Sys
 3. Als Vorlage speichern
 
 Wie drucke ich Zeugnisse?
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Schüler auswählen
 2. Datei → Drucken → Schüler-Zeugnis
@@ -230,7 +230,7 @@ Technische Probleme
 -------------------
 
 YAMMS startet nicht - was tun?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Windows:**
 
@@ -258,7 +258,7 @@ YAMMS startet nicht - was tun?
 * Antivirus-Software temporär deaktivieren
 
 "Datenbank ist beschädigt" - Fehlermeldung
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Sofort:** Programm beenden, nichts speichern
 2. **Backup wiederherstellen:**
@@ -275,7 +275,7 @@ YAMMS startet nicht - was tun?
 4. **Präventiv:** Regelmäßige manuelle Backups erstellen
 
 Import schlägt fehl
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 **Häufige Ursachen und Lösungen:**
 
@@ -292,7 +292,7 @@ Import schlägt fehl
 4. Bei Excel: Als CSV exportieren und nochmal versuchen
 
 Noten werden falsch berechnet
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **Gewichtungen prüfen:**
 
@@ -311,7 +311,7 @@ Noten werden falsch berechnet
    * Bei Abweichung: Bug-Report erstellen
 
 Performance-Probleme
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 **YAMMS läuft langsam:**
 
@@ -330,7 +330,7 @@ Updates und Versionen
 ---------------------
 
 Wie aktualisiere ich YAMMS?
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Automatisch (empfohlen):**
 
@@ -347,7 +347,7 @@ Wie aktualisiere ich YAMMS?
 4. Daten werden automatisch migriert
 
 Gehen meine Daten bei Updates verloren?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nein! YAMMS erstellt vor jedem Update automatisch ein Backup. Die Datenbank wird bei Bedarf automatisch auf das neue Format migriert.
 
@@ -358,7 +358,7 @@ Nein! YAMMS erstellt vor jedem Update automatisch ein Backup. Die Datenbank wird
 * Update zunächst auf Testsystem probieren
 
 Welche Version habe ich installiert?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Hilfe → "Über YAMMS"
 * Oder beim Programmstart in der Titelleiste
@@ -368,7 +368,7 @@ Datenportabilität
 -----------------
 
 Kann ich meine Daten auf einen anderen Computer übertragen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja, sehr einfach:
 
@@ -386,7 +386,7 @@ Ja, sehr einfach:
 3. YAMMS starten, Datei öffnen
 
 Funktioniert YAMMS im Netzwerk?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YAMMS ist für Einzelarbeitsplätze konzipiert. Mehrbenutzer-Zugriff ist nicht vorgesehen und kann zu Datenverlust führen.
 
@@ -397,7 +397,7 @@ YAMMS ist für Einzelarbeitsplätze konzipiert. Mehrbenutzer-Zugriff ist nicht v
 * Geplant für v0.3: Sync-Funktion für Lehrerteams
 
 Kann ich YAMMS portable nutzen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja! YAMMS kann vollständig portable betrieben werden:
 
@@ -407,10 +407,10 @@ Ja! YAMMS kann vollständig portable betrieben werden:
 4. Auf jedem Computer verwendbar
 
 Erweiterte Funktionen
---------------------
+---------------------
 
 Kann ich eigene Notenschlüssel erstellen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja, YAMMS unterstützt benutzerdefinierte Notenschlüssel:
 
@@ -420,7 +420,7 @@ Ja, YAMMS unterstützt benutzerdefinierte Notenschlüssel:
 4. Import/Export von Notenschlüsseln möglich
 
 Gibt es eine API für Entwickler?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktuell nein, aber geplant für v0.3:
 
@@ -429,7 +429,7 @@ Aktuell nein, aber geplant für v0.3:
 * Dokumentierte Datenbank-Struktur
 
 Kann ich YAMMS an unser Schulnetzwerk anbinden?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YAMMS ist bewusst standalone konzipiert. Für Schulnetzwerk-Integration müssten Sie:
 
@@ -440,10 +440,10 @@ YAMMS ist bewusst standalone konzipiert. Für Schulnetzwerk-Integration müssten
 Geplant ist eine "School Edition" mit Netzwerk-Features.
 
 Support und Community
---------------------
+---------------------
 
 Wo bekomme ich Hilfe?
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 1. **Diese FAQ:** Häufige Probleme und Lösungen
 2. **Benutzerhandbuch:** Detaillierte Anleitung
@@ -452,7 +452,7 @@ Wo bekomme ich Hilfe?
 5. **Forum:** Geplant für größere Community
 
 Wie melde ich einen Bug?
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. **GitHub Issues:** https://github.com/MisfitFred/yamms/issues
 2. **Information sammeln:**
@@ -466,7 +466,7 @@ Wie melde ich einen Bug?
 3. **Logs anhängen:** `~/Noten/logs/yamms.log`
 
 Kann ich bei der Entwicklung helfen?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ja! YAMMS ist Open Source:
 
@@ -479,7 +479,7 @@ Ja! YAMMS ist Open Source:
 Siehe `CONTRIBUTING.md` im GitHub-Repository.
 
 Gibt es Schulungen oder Workshops?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aktuell nicht, aber geplant:
 

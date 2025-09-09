@@ -4,10 +4,10 @@ Deployment
 Diese Seite beschreibt den Build- und Deployment-Prozess für YAMMS.
 
 Build-System
------------
+------------
 
 nox-basierte Builds
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 Das Projekt verwendet `nox` als primäres Build-Tool:
 
@@ -26,7 +26,7 @@ Das Projekt verwendet `nox` als primäres Build-Tool:
    nox -s dist
 
 PyInstaller-Packaging
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Für End-User-Distributionen verwenden wir PyInstaller:
 
@@ -45,7 +45,7 @@ Target-Platforms
 ----------------
 
 Unterstützte Betriebssysteme
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. list-table:: Platform-Support
    :header-rows: 1
@@ -73,7 +73,7 @@ Unterstützte Betriebssysteme
      - Manual Testing
 
 Abhängigkeiten
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 .. code-block:: toml
 
@@ -89,10 +89,10 @@ Abhängigkeiten
    ]
 
 Release-Pipeline
----------------
+----------------
 
 GitHub Actions Workflow
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: yaml
 
@@ -150,7 +150,7 @@ GitHub Actions Workflow
              generate_release_notes: true
 
 Versionierung
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
 Wir folgen Semantic Versioning (SemVer):
 
@@ -166,10 +166,10 @@ Wir folgen Semantic Versioning (SemVer):
    bump2version major  # 0.2.0 → 1.0.0
 
 Packaging-Konfiguration
-----------------------
+-----------------------
 
 PyInstaller-Specs
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -228,7 +228,7 @@ PyInstaller-Specs
    )
 
 Build-Optimierung
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -244,10 +244,10 @@ Build-Optimierung
      app/main.py
 
 Installation & Distribution
---------------------------
+---------------------------
 
 Windows-Installation
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: batch
 
@@ -258,7 +258,7 @@ Windows-Installation
    yamms-installer.msi
 
 Linux-Installation
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -276,7 +276,7 @@ Linux-Installation
    ./yamms.AppImage
 
 macOS-Installation
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -287,7 +287,7 @@ macOS-Installation
    brew install --cask yamms
 
 Auto-Update (Zukunft)
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Für v0.3 geplant:
 
@@ -304,10 +304,10 @@ Für v0.3 geplant:
            pass
 
 Container-Deployment
--------------------
+--------------------
 
 Docker-Support (Optional)
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Für Server-Deployments oder Development:
 
@@ -334,7 +334,7 @@ Für Server-Deployments oder Development:
    CMD ["python", "app/main.py"]
 
 DevContainer
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 .. code-block:: json
 
@@ -360,10 +360,10 @@ DevContainer
    }
 
 Monitoring & Telemetrie
----------------------
+-----------------------
 
 Crash-Reporting
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -379,7 +379,7 @@ Crash-Reporting
            )
 
 Performance-Monitoring
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -394,10 +394,10 @@ Performance-Monitoring
            pass
 
 Security & Code-Signing
-----------------------
+-----------------------
 
 Windows Code-Signing
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -405,7 +405,7 @@ Windows Code-Signing
    signtool sign /f certificate.p12 /p password /t http://timestamp.url yamms.exe
 
 macOS Code-Signing
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -416,7 +416,7 @@ macOS Code-Signing
    xcrun notarytool submit yamms.app --keychain-profile "notary"
 
 Vulnerability-Scanning
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -427,10 +427,10 @@ Vulnerability-Scanning
    cyclonedx-bom -o sbom.json
 
 Backup & Recovery
-----------------
+-----------------
 
 Backup-Strategien
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -445,7 +445,7 @@ Backup-Strategien
            pass
 
 User-Data-Migration
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -456,10 +456,10 @@ User-Data-Migration
            pass
 
 Troubleshooting
---------------
+---------------
 
 Build-Probleme
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 **PyInstaller findet Module nicht:**
 
@@ -483,7 +483,7 @@ Build-Probleme
    pyinstaller --add-data "resources:resources" app/main.py
 
 Platform-spezifische Probleme
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Windows: "MSVCP140.dll fehlt"**
 

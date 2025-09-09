@@ -5,7 +5,7 @@ SQLCipher ist eine optionale Abhängigkeit für YAMMS, die Datenbankverschlüsse
 Die Installation erfordert zusätzliche Systemabhängigkeiten.
 
 Installation auf Ubuntu/Debian
--------------------------------
+------------------------------
 
 .. code-block:: bash
 
@@ -17,7 +17,7 @@ Installation auf Ubuntu/Debian
    pip install sqlcipher3>=0.5.2
 
 Installation auf anderen Systemen
-----------------------------------
+---------------------------------
 
 **macOS (mit Homebrew):**
 

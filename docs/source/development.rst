@@ -73,7 +73,7 @@ Das Projekt verwendet `nox` als Task-Orchestrierung:
    nox -s ci
 
 Code-Qualität
---------------
+-------------
 
 Linting und Formatierung
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -200,7 +200,7 @@ Branch-Strategie
 * **hotfix/***:** Kritische Bugfixes von main
 
 Commit-Nachrichten
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 Folgen Sie der Conventional Commits Spezifikation:
 
@@ -213,7 +213,7 @@ Folgen Sie der Conventional Commits Spezifikation:
    refactor: extract note calculation to domain
 
 Pull Request Prozess
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 1. Feature-Branch von `develop` erstellen
 2. Implementierung mit Tests
@@ -222,7 +222,7 @@ Pull Request Prozess
 5. Merge nach `develop`
 
 Continuous Integration
----------------------
+----------------------
 
 GitHub Actions Pipeline
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -240,7 +240,7 @@ Die CI/CD-Pipeline läuft auf jedem Push und PR:
    - Packaging (auf Tags)
 
 Release-Prozess
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 1. Version in `pyproject.toml` aktualisieren
 2. Changelog aktualisieren
@@ -273,10 +273,10 @@ Performance-Monitoring
    memory_profiler -l app/main.py
 
 Troubleshooting
---------------
+---------------
 
 Häufige Probleme
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 **UI startet nicht unter WSL2:**
 

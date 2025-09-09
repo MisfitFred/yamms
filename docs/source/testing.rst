@@ -4,7 +4,7 @@ Tests
 Diese Seite beschreibt die Teststrategie und die Ausführung der Tests im YAMMS-Projekt.
 
 Testphilosophie
---------------
+---------------
 
 YAMMS folgt einer umfassenden Teststrategie basierend auf der Test-Pyramide:
 
@@ -38,7 +38,7 @@ Testen die Domain-Logik isoliert ohne externe Abhängigkeiten:
        assert result.grade_level == 13  # Bei 15-Punkte-System
 
 Integration-Tests
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 Testen das Zusammenspiel zwischen Application- und Infrastructure-Layer:
 
@@ -83,7 +83,7 @@ Testen komplette Benutzer-Workflows über die UI:
        assert grade == 13
 
 Tests ausführen
---------------
+---------------
 
 Alle Tests
 ~~~~~~~~~~
@@ -97,7 +97,7 @@ Alle Tests
    pytest
 
 Spezifische Test-Kategorien
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -111,7 +111,7 @@ Spezifische Test-Kategorien
    nox -s tests -- tests/e2e
 
 Einzelne Tests
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -125,7 +125,7 @@ Einzelne Tests
    pytest -k "grade_calculation"
 
 Test Coverage
-------------
+-------------
 
 Coverage-Report generieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -147,7 +147,7 @@ Coverage-Ziele
 * **UI-Layer:** > 60% Coverage (kritische Workflows)
 
 Mocking und Fixtures
--------------------
+--------------------
 
 Test-Fixtures
 ~~~~~~~~~~~~~
@@ -187,7 +187,7 @@ Mocking externe Abhängigkeiten
        mock_weasyprint.HTML.assert_called_once()
 
 Property-Based Testing
----------------------
+----------------------
 
 Für komplexe Geschäftslogik verwenden wir Hypothesis:
 
@@ -207,7 +207,7 @@ Für komplexe Geschäftslogik verwenden wir Hypothesis:
            assert 0 <= percentage <= 100
 
 Performance-Tests
-----------------
+-----------------
 
 Load-Tests für kritische Operationen:
 
@@ -229,7 +229,7 @@ Load-Tests für kritische Operationen:
        assert len(results) == 1000
 
 UI-Tests mit Qt
---------------
+---------------
 
 PySide6/Qt-Tests benötigen spezielle Behandlung:
 
@@ -288,7 +288,7 @@ Test-Factories für konsistente Testdaten:
        weight = factory.Faker('random_element', elements=[1.0, 1.5, 2.0])
 
 Continuous Testing
------------------
+------------------
 
 Test-Automation in CI/CD
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -321,7 +321,7 @@ Test-Automation in CI/CD
            run: nox -s tests
 
 Pre-commit Testing
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -339,7 +339,7 @@ Test-Debugging
 --------------
 
 Debugging fehlschlagender Tests
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -356,7 +356,7 @@ Debugging fehlschlagender Tests
    pytest --lf
 
 Test-Output analysieren
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -370,14 +370,14 @@ Best Practices
 --------------
 
 Test-Naming
-~~~~~~~~~~
+~~~~~~~~~~~
 
 * Verwenden Sie beschreibende Namen: `test_should_calculate_weighted_average_when_multiple_tasks_exist`
 * Folgen Sie dem AAA-Pattern: Arrange, Act, Assert
 * Ein Test pro Verhalten/Szenario
 
 Test-Organisation
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 * Gruppieren Sie Tests in logische Module
 * Verwenden Sie aussagekräftige Docstrings

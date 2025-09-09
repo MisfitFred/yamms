@@ -68,7 +68,7 @@ Inhaltsverzeichnis
    testing
    deployment
    sqlcipher_setup
-   faq
+
 
 .. toctree::
    :maxdepth: 2

@@ -1,5 +1,5 @@
 Module
-=======
+======
 
 .. note::
    Die Module-Dokumentation wird automatisch generiert, sobald der Code implementiert ist.

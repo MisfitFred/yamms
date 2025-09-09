@@ -1,5 +1,5 @@
 Benutzerhandbuch
-===============
+================
 
 Willkommen bei YAMMS - Ihrem lokalen Notenverwaltungstool! Diese Anleitung führt Sie durch alle wichtigen Funktionen.
 
@@ -7,14 +7,14 @@ Erste Schritte
 --------------
 
 Installation
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 1. **Windows:** Laden Sie `yamms.exe` herunter und führen Sie es aus
 2. **Linux:** Laden Sie das `yamms` Binary herunter, machen Sie es ausführbar (`chmod +x yamms`) und starten Sie es
 3. **macOS:** Öffnen Sie `yamms.app` (ggf. Sicherheitseinstellungen anpassen)
 
 Erster Start
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 Beim ersten Start werden Sie aufgefordert:
 
@@ -26,10 +26,10 @@ Beim ersten Start werden Sie aufgefordert:
    YAMMS speichert alle Daten lokal auf Ihrem Computer. Es werden keine Daten in die Cloud übertragen.
 
 Grundlegende Bedienung
----------------------
+----------------------
 
 Hauptfenster-Aufbau
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: text
 
@@ -53,7 +53,7 @@ Hauptfenster-Aufbau
    └─────────────┴───────────────────────────────────────────────┘
 
 Navigation
-~~~~~~~~~
+~~~~~~~~~~
 
 * **Klassen-Auswahl:** Klicken Sie links auf eine Klasse
 * **Fach-Auswahl:** Wählen Sie das gewünschte Fach aus der Liste
@@ -65,10 +65,10 @@ Navigation
   - `F11`: Vollbild
 
 Klassen- und Schülerverwaltung
------------------------------
+------------------------------
 
 Neue Klasse anlegen
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
 1. Rechtsklick im Klassen-Bereich → "Neue Klasse"
 2. Klassennamen eingeben (z.B. "10a")
@@ -76,7 +76,7 @@ Neue Klasse anlegen
 4. Mit "OK" bestätigen
 
 Schüler hinzufügen
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~
 
 **Einzeln:**
 
@@ -103,17 +103,17 @@ Schüler hinzufügen
       Tom,Weber,10a,
 
 Schüler bearbeiten/löschen
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * **Bearbeiten:** Doppelklick auf Schülername
 * **Löschen:** Rechtsklick → "Löschen" (Warnung erscheint)
 * **Klasse wechseln:** Drag & Drop zwischen Klassen
 
 Aufgaben- und Notenverwaltung
-----------------------------
+-----------------------------
 
 Neue Aufgabe erstellen
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 1. Fach auswählen
 2. Button "Neue Aufgabe" oder `Strg+N`
@@ -127,7 +127,7 @@ Neue Aufgabe erstellen
    * **Bemerkung:** Optional
 
 Noten eingeben
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 **Direkte Eingabe:**
 
@@ -150,7 +150,7 @@ Noten eingeben
 * **Attest:** `a` für ärztliches Attest
 
 Notenberechnung verstehen
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 YAMMS berechnet Noten transparent in mehreren Schritten:
 
@@ -175,7 +175,7 @@ YAMMS berechnet Noten transparent in mehreren Schritten:
    Gesamtnote: 13 (gerundet)
 
 Notenschlüssel anpassen
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Menü → "Extras" → "Notenschlüssel"
 2. Fach auswählen oder "Standard" für alle Fächer
@@ -192,10 +192,10 @@ Notenschlüssel anpassen
    9 Punkte:  ≥65%    |  2 Punkte: ≥23%   |
 
 Import und Export
-----------------
+-----------------
 
 Schülerdaten importieren
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Unterstützte Formate:** CSV, Excel (.xlsx)
 
@@ -216,7 +216,7 @@ Schülerdaten importieren
 5. Spalten zuordnen
 
 Noten exportieren
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 **Excel-Export:**
 
@@ -235,10 +235,10 @@ Noten exportieren
 3. Zeichenkodierung (UTF-8 empfohlen)
 
 Berichte und Ausdruck
--------------------
+---------------------
 
 Klassenübersicht drucken
-~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Klasse und Fach auswählen
 2. Datei → "Drucken" → "Klassenübersicht"
@@ -250,7 +250,7 @@ Klassenübersicht drucken
 5. Drucken oder als PDF speichern
 
 Einzelschüler-Report
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 1. Schüler auswählen
 2. Datei → "Drucken" → "Schüler-Zeugnis"
@@ -261,7 +261,7 @@ Einzelschüler-Report
    - Notenentwicklung (Diagramm)
 
 Notenlisten erstellen
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 1. Datei → "Berichte" → "Notenliste"
 2. Filter setzen:
@@ -273,10 +273,10 @@ Notenlisten erstellen
 4. Exportieren oder drucken
 
 Backup und Sicherheit
---------------------
+---------------------
 
 Automatische Backups
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 YAMMS erstellt automatisch Backups:
 
@@ -286,7 +286,7 @@ YAMMS erstellt automatisch Backups:
 * **Aufbewahrung:** 30 Tage (konfigurierbar)
 
 Manuelles Backup
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 1. Datei → "Backup" → "Backup erstellen"
 2. Speicherort wählen
@@ -295,7 +295,7 @@ Manuelles Backup
 5. Backup erstellen
 
 Wiederherstellung
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 1. Datei → "Backup" → "Wiederherstellen"
 2. Backup-Datei auswählen
@@ -304,7 +304,7 @@ Wiederherstellung
 5. Wiederherstellung bestätigen
 
 Daten-Verschlüsselung
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 **Beim ersten Start:**
 
@@ -327,10 +327,10 @@ Daten-Verschlüsselung
    * Es gibt keine Passwort-Wiederherstellung!
 
 Erweiterte Funktionen
--------------------
+---------------------
 
 Bemerkungen und Kommentare
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Schüler-Bemerkungen:**
 
@@ -345,7 +345,7 @@ Bemerkungen und Kommentare
 * Nur für Lehrkraft sichtbar
 
 Statistiken und Analysen
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Klassenstatistiken:**
 
@@ -368,7 +368,7 @@ Statistiken und Analysen
 4. Trend-Analyse
 
 Mehrere Klassen/Fächer
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 **Fach-übergreifende Ansicht:**
 
@@ -384,7 +384,7 @@ Mehrere Klassen/Fächer
 4. Anonymisierte Darstellung
 
 Tastaturkürzel
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 .. list-table:: Wichtige Shortcuts
    :header-rows: 1
@@ -417,7 +417,7 @@ Problemlösung
 -------------
 
 Häufige Probleme
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~
 
 **Problem: "Datenbank kann nicht geöffnet werden"**
 
@@ -449,7 +449,7 @@ Häufige Probleme
   3. Seitenränder anpassen
 
 Daten-Reparatur
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 **Backup-Wiederherstellung:**
 
@@ -465,10 +465,10 @@ Daten-Reparatur
 3. Backup wird vor Reparatur erstellt
 
 Support und Updates
-------------------
+-------------------
 
 Hilfe erhalten
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 
 1. **Eingebaute Hilfe:** F1 drücken
 2. **Online-Dokumentation:** yamms.readthedocs.io
@@ -476,7 +476,7 @@ Hilfe erhalten
 4. **E-Mail-Support:** support@yamms.de
 
 Updates installieren
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 **Automatische Prüfung:**
 
@@ -493,7 +493,7 @@ Updates installieren
 5. Daten werden automatisch migriert
 
 Datenschutz-Hinweise
-~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 * **Lokale Speicherung:** Alle Daten bleiben auf Ihrem Computer
 * **Keine Cloud:** Keine automatische Synchronisation

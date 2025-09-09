@@ -164,6 +164,7 @@ Während Features autonom sind, teilen sie sich bewährte Infrastruktur:
   ├── formatting.py        # Number/Date Formatierung
   ├── io_helpers.py        # File I/O Utilities
   └── logging.py           # Structured Logging Setup
+
 4. Reactive Programming Model
 -----------------------------
 
@@ -252,6 +253,7 @@ YAMMS nutzt ein **Reactive Programming**-Modell für konsistente UI-Updates:
   - ✅ Flexible Strukturierung
   - ✅ Bessere Testbarkeit
   - ✅ Moderne Patterns ohne Legacy-Ballast
+
 6. Detaillierte Verzeichnisstruktur
 ------------------------------------
 
@@ -711,4 +713,3 @@ Konsequenz: reproduzierbar, saubere Toolchain, GUI über WSLg.
 - **Aufgabe:** bewertete Leistung (KA/Test/Mündlich/Projekt) mit Datum und Gewicht
 - **Notenschlüssel:** Mapping Prozent → Note (15-Punkte oder 1–6)
 - **Fachnote:** gewichtete, gerundete Gesamtnote je Fach/Schüler
-```
