@@ -12,7 +12,7 @@ Ein lokales, DSGVO-freundliches Notenverwaltungstool für Lehrkräfte *(geplant)
 
 ## Überblick
 
-YAMMS soll ein Desktop-Tool zur schnellen und transparenten Notenverwaltung werden, das speziell für einzelne Lehrkräfte entwickelt wird. Es soll vollständig offline laufen und bieten *(geplante Features)*:
+YAMMS soll ein Desktop-Tool zur schnellen und transparenten Notenverwaltung werden, das speziell für Lehrkräfte entwickelt wird. Es soll vollständig offline laufen und bieten *(geplante Features)*:
 
 - 📚 **Klassen- und Schülerverwaltung** mit flexibler Organisation
 - 📝 **Aufgabenverwaltung** mit konfigurierbaren Gewichtungen

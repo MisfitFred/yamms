@@ -23,7 +23,7 @@ venv/
 
 # IDEs
 # .vscode/  # Projekt-spezifische VSCode-Config wird committed
-.idea/
+
 
 # OS
 .DS_Store
