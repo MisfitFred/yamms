@@ -30,20 +30,23 @@ YAMMS soll ein Desktop-Tool zur schnellen und transparenten Notenverwaltung werd
 
 - Python 3.12 oder höher
 - Git (für Entwicklung)
+- Nox (global installiert)
 
 ### Installation (Entwicklung)
 
 ```bash
+# Nox global installieren (einmalig)
+pip install nox
+# oder mit pipx (empfohlen):
+pipx install nox
+
 # Repository klonen
 git clone https://github.com/MisfitFred/yamms.git
 cd yamms
 
-# Virtuelle Umgebung erstellen und aktivieren
-python3 -m venv venv
-source venv/bin/activate  # Linux/macOS
-# oder: venv\Scripts\activate  # Windows
-
 # Entwicklungsumgebung einrichten (Dependencies + Pre-commit hooks)
+# Nox erstellt automatisch isolierte virtuelle Umgebungen für jede Task
+# Funktioniert plattformunabhängig (Linux/macOS/Windows)
 nox -s dev_install
 
 # Funktionalität testen
@@ -55,15 +58,15 @@ nox -s lint           # Code-Qualität prüfen
 ### Schnelle Entwicklung
 
 ```bash
-# Entwicklungsumgebung aktivieren
-source venv/bin/activate
-
 # Dokumentation mit Live-Server
 nox -s docs_serve
 # dann http://localhost:8000 öffnen
 
 # Alle verfügbaren Tasks anzeigen
 nox -l
+
+# Vollständiger CI-Build (wie auf GitHub Actions)
+nox -s ci
 ```
 
 ## Architektur

@@ -84,8 +84,9 @@ def docs_serve(session):
 @nox.session(python=MAIN_PYTHON)
 def security(session):
     """Security-Checks."""
-    session.install("safety", "bandit", "pip-audit")
-    session.run("safety", "check")
+    session.install("bandit", "pip-audit")
+    # safety entfernt - erfordert Account bei safetycli.com
+    # pip-audit bietet ähnliche Vulnerability-Checks
     session.run("bandit", "-r", "yamms")
     session.run("pip-audit")
 
