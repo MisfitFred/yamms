@@ -1,0 +1,1 @@
+"""Test-Konfiguration für YAMMS."""

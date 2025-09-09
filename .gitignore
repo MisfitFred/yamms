@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+
+# Testing & Coverage
+.coverage
+.pytest_cache/
+.nox/
+htmlcov/
+
+# Tools
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.env
+.venv
+venv/
+
+# IDEs
+# .vscode/  # Projekt-spezifische VSCode-Config wird committed
+
+
+# OS
+.DS_Store
+Thumbs.db
+
+# YAMMS specific
+*.db
+*.sqlite
+*.sqlite3
