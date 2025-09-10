@@ -27,7 +27,10 @@ jobs:
             libglib2.0-0 \
             libxkbcommon-x11-0 \
             libxcb-xinerama0 \
-            xvfb
+            xvfb \
+            sqlite3 \
+            sqlcipher \
+            libsqlcipher-dev
 
       - name: Cache pip dependencies
         uses: actions/cache@v3

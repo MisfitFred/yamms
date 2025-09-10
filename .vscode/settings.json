@@ -1,6 +1,9 @@
 {
-    // Python-Interpreter auf die virtuelle Umgebung setzen
-    "python.defaultInterpreterPath": "./venv/bin/python",
+    // Python-Interpreter auf nox dev_install environment setzen
+    "python.defaultInterpreterPath": "./.nox/dev_install/bin/python",
+
+    // Ruff-spezifische Einstellungen - verwende ruff aus nox environment
+    "ruff.path": ["./.nox/dev_install/bin/ruff"],
     // === BLACK FORMATTER EXTENSION ===
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",

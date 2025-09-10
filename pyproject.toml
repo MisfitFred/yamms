@@ -31,6 +31,7 @@ dependencies = [
     "pydantic-settings>=2.10.0",
     "rich>=13.9.0",
     "platformdirs>=4.3.0",
+    "pysqlcipher3>=1.2.0",
 ]
 
 [project.optional-dependencies]
